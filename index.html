@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — ML Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --bg: #faf9f7;
+      --text: #2c2c2c;
+      --text-muted: #666;
+      --accent: #c45d3a;
+      --accent-hover: #a84d2f;
+      --border: #e5e3df;
+      --code-bg: #f0eeea;
+    }
+    
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 18px;
+    }
+    
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    
+    header {
+      margin-bottom: 60px;
+    }
+    
+    .name {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    
+    .tagline {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    
+    nav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 0.2s;
+    }
+    
+    nav a:hover {
+      border-bottom-color: var(--accent);
+    }
+    
+    section {
+      margin-bottom: 56px;
+    }
+    
+    h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    
+    p {
+      margin-bottom: 16px;
+    }
+    
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    .interest-tag {
+      background: var(--code-bg);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    
+    .link-card {
+      border: 1.5px solid var(--border);
+      padding: 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    
+    .link-card:hover {
+      border-color: var(--accent);
+      background: #fff;
+      text-decoration: none;
+    }
+    
+    .link-card-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    
+    .link-card-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #fef9f3 0%, #fdf6ed 100%);
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .papers-list {
+      list-style: none;
+    }
+    
+    .papers-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .papers-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .paper-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    
+    .paper-venue {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    
+    footer {
+      margin-top: 80px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    
+    .whimsy {
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85em;
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 48px 20px; }
+      .name { font-size: 1.8rem; }
+      nav { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="name">Priyanka Vijaybaskar</h1>
+      <p class="tagline">Graduate Student / MS Computational Data Science At Carnegie Mellon Universtiy</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="https://yourname.substack.com" target="_blank">Blog ↗</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I'm a researcher working on machine learning—specifically the parts where 
+        statistical rigor meets the messiness of real-world reasoning. I care about 
+        building systems that are not just accurate but <em>trustworthy</em>, and 
+        understanding why they work when they do.
+      </p>
+      <p>
+        Currently at CMU. 
+        <span class="whimsy">Fueled by coffee and a persistent belief that theory 
+        and practice should talk to each other more.</span>
+      </p>
+      
+      <div class="interests">
+        <span class="interest-tag">Statistical ML</span>
+        <span class="interest-tag">Responsible AI</span>
+        <span class="interest-tag">Neurosymbolic AI</span>
+        <span class="interest-tag">Reasoning</span>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <p>
+        I think about how to make ML systems that can <em>reason</em>—not just 
+        pattern-match—and how to do so responsibly. This means working at the 
+        intersection of neural methods, symbolic structures, and statistical foundations.
+      </p>
+      
+      <div class="highlight-box">
+        <strong>Current obsessions:</strong> How do we get the best of neural flexibility 
+        and symbolic precision? What does "fairness" even mean when your model is a 
+        black box? Can we build systems that know what they don't know? Can we blend epistemology and ontology in neural models ?</br>
+         <strong>If you have thoughts on this, I'd love to hear from you.</strong> 
+
+      </div>
+
+      <h3 style="font-size: 1rem; margin: 32px 0 16px; font-weight: 600;">Selected Work</h3>
+      <ul class="papers-list">
+        <li>
+          <div class="paper-title">DeepFake Detection by Prediction of Mismatch Between Audio and Video Lip Movement</div>
+          <div class="paper-venue">ADICS 2024· <a href="https://ieeexplore.ieee.org/abstract/document/10533515">pdf</a>
+        </li>
+        <li>
+          <div class="paper-title">Multi Agent Reasoning in Large Language Models for Nutrition and Dietetics</div>
+          <div class="paper-venue">ICIVC 2025 (To be published 2026)
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Writing</h2>
+      <p>
+        I write about ML, reasoning, and the occasional philosophical detour on 
+        <a href="https://yourname.substack.com" target="_blank">Substack</a>. 
+        Expect deep dives, not hot takes.
+      </p>
+      
+      <div class="links-grid" style="margin-top: 20px;">
+        <a href="https://yourname.substack.com" class="link-card" target="_blank">
+          <div class="link-card-title">Blog →</div>
+          <div class="link-card-desc">Technical writing on Substack</div>
+        </a>
+        <a href="https://github.com/prinks-wiz" class="link-card" target="_blank">
+          <div class="link-card-title">GitHub →</div>
+          <div class="link-card-desc">Code and projects</div>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:pvijayba@cs.cmu.edu">pvijayba@cs.cmu.edu</a><br>
+        LinkedIN: <a href="https://linkedin.com/in/priyankavijaybaskar">priyanka-vijaybaskar</a><br>
+        Scholar: <a href="https://scholar.google.com/citations?hl=en&user=_DMPoEEAAAAJ&view_op=list_works&gmla=AKzYXQ3k9uxTOxAIOJiXDsj8rVGGFCnjhg2g1I3FS17iJL6CTvcQlNz4G_giUuJADgA3OidJ6boZioC9d9hKOVW6">Google Scholar</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 · Built with plain HTML and questionable CSS decisions</p>
+    </footer>
+  </div>
+</body>
+</html>
